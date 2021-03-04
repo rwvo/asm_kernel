@@ -13,7 +13,7 @@ gfx906.asm.co: gfx906.s
 kernel_from_module: kernel_from_module.cpp
 	hipcc -o $@ $<
 
-test:
+test: direct_kernel kernel_from_module gfx906.asm.co
 	./direct_kernel
 	./kernel_from_module gfx906.asm.co
 
