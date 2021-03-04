@@ -61,4 +61,5 @@ int main(int argc, const char** argv){
   for(auto& r: results){
     printf("%d  ", r);
   }
+  printf("\n");
 }
