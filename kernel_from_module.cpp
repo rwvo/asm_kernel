@@ -42,8 +42,8 @@ int main(int argc, const char** argv){
 				  HIP_LAUNCH_PARAM_BUFFER_SIZE, &kernel_args_size,
 				  HIP_LAUNCH_PARAM_END };
   hip_result = hipModuleLaunchKernel(function,
-				     1, 0, 0,
-				     size, 0, 0,
+				     1, 1, 1,
+				     size, 1, 1,
 				     0, 0, nullptr,
 				     kernel_args_wrapper);
   if(hip_result != hipSuccess){
