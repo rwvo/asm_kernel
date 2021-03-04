@@ -1,0 +1,6 @@
+direct_kernel
+kernel_from_module
+direct_kernel-*
+*.hipfb
+*.s
+*.co
