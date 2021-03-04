@@ -18,6 +18,10 @@ int main(){
   hipLaunchKernelGGL(kernel, 1, size, 0, 0, args, size);
   hipDeviceSynchronize();
   std::vector<int> results(size);
+  for(auto& r: results){
+    printf("%d  ", r);
+  }
+  printf("\n\n");
   hipMemcpy(results.data(), args, size * sizeof(int), hipMemcpyDeviceToHost);
   for(auto& r: results){
     printf("%d  ", r);
