@@ -53,10 +53,6 @@ int main(int argc, const char** argv){
   
   hipDeviceSynchronize();
   std::vector<int> results(size);
-  for(auto& r: results){
-    printf("%d  ", r);
-  }
-  printf("\n\n");
   hipMemcpy(results.data(), int_array, size * sizeof(int), hipMemcpyDeviceToHost);
   for(auto& r: results){
     printf("%d  ", r);
