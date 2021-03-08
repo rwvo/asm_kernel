@@ -31,4 +31,4 @@ test: direct_kernel kernel_from_module ${ARCH}.asm.co ${ARCH}.mod.co
 	./kernel_from_module ${ARCH}.mod.co
 
 clean:
-	rm -f direct_kernel kernel_from_module direct_kernel-* *.hipfb *.s *.co
+	rm -f direct_kernel kernel_from_module direct_kernel-* *.hipfb gfx906.s *.co
